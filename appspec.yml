@@ -1,8 +1,5 @@
 version: 0.0
 os: linux
-files:
-  - source: /Docker compose
-    destination: ~ /Jo_Agam_DevOps-project-super-app
 hooks:
   AfterInstall:
     - location: scripts/install_dependencies&image.sh
