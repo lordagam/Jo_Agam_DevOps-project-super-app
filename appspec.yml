@@ -1,18 +1,18 @@
 version: 0.0
 os: linux
 files:
-  - source: /index.html
-    destination: /var/www/html/
+  - source: /Dockerfile
+    destination: .
 hooks:
-  BeforeInstall:
-    - location: scripts/install_dependencies
-      timeout: 300
+  AfterInstall:
+    - location: scripts/install_dependencies&image.sh
+      timeout: 1500
       runas: root
-    - location: scripts/start_server
-      timeout: 300
+  ApplicationStart:
+    - location: scripts/start_container.sh
+      timeout: 50000
       runas: root
   ApplicationStop:
-    - location: scripts/stop_server
-      timeout: 300
+    - location: scripts/kill_container.sh
+      timeout: 20000
       runas: root
-
