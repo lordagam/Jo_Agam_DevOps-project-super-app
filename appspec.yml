@@ -4,12 +4,12 @@ hooks:
   AfterInstall:
     - location: scripts/install_dependencies&image.sh
       timeout: 1500
-      runas: root
+      runas: ec2-user
   ApplicationStart:
     - location: scripts/start_container.sh
       timeout: 50000
-      runas: root
+      runas: ec2-user
   ApplicationStop:
     - location: scripts/kill_container.sh
       timeout: 20000
-      runas: root
+      runas: ec2-user
