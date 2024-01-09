@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 hooks:
   AfterInstall:
-    - location: scripts/install_dependencies&image.sh
+    - location: scripts/install_dependencies.sh
       timeout: 1500
       runas: root
   ApplicationStart:
