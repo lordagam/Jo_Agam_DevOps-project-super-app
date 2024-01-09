@@ -6,10 +6,10 @@ hooks:
       timeout: 1500
       runas: root
   ApplicationStart:
-    - location: start_container.sh
+    - location: scripts/start_container.sh
       timeout: 50000
       runas: root
   ApplicationStop:
-    - location: stop_container.sh
+    - location: scripts/stop_container.sh
       timeout: 20000
       runas: root
