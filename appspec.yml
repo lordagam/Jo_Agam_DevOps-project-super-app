@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: /docker-compose.yml
+  - source: /opt/codedeploy-agent/deployment-root/1b1ab9c0-744d-40f9-a2a2-a4ec9f761a2a/d-HO2PZ8MP3/deployment-archive/docker-compose.yml
     destination: /home/ec2-user/
     runas: root
 hooks:
